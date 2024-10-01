@@ -14,12 +14,6 @@
 ### Tela Inicial
 ![Tela Inicial](images/AppHome1.PNG)
 
-### Tela Inicial
-![Tela Inicial](images/AppHome2.PNG)
-
-### Tela De Consulta
-![Resultado da Consulta](images/AppPagina1.PNG)
-
 ### Resultado da Consulta
 ![Resultado da Consulta](images/AppPagina1.PNG)
 
