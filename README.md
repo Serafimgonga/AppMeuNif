@@ -36,5 +36,5 @@ Para configurar a aplicação, siga os passos abaixo:
 
 1. **Clone o repositório:**
 
-   git clone https://github.com/USERNAME/AppConsultaNif.git
+   git clone https://github.com/Serafimgonga/AppMeuNif.git
    cd AppConsultaNif
