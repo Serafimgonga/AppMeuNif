@@ -14,8 +14,14 @@
 ### Tela Inicial
 ![Tela Inicial](images/AppHome1.PNG)
 
-### Resultado da Consulta
+### Tela Inicial Baixo
+![Tela Inicial](images/AppHome2.PNG)
+
+### Pagina De Consulta
 ![Resultado da Consulta](images/AppPagina1.PNG)
+
+### Resultado da Consulta
+![Resultado da Consulta](images/AppPagina2.PNG)
 
 ## Tecnologias Utilizadas
 
