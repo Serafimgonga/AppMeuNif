@@ -23,6 +23,9 @@
 ### Resultado da Consulta
 ![Resultado da Consulta](images/AppPagina2.PNG)
 
+### Detalhe Da Consulta
+![Resultado da Consulta](images/AppPagina3.PNG)
+
 ## Tecnologias Utilizadas
 
 - **.NET MAUI:** Framework utilizado para o desenvolvimento da aplicação, permitindo a criação de interfaces de usuário nativas para iOS, Android, macOS e Windows com um único código base.
