@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="AppConsultaNif.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:AppConsultaNif"
+    xmlns:view="clr-namespace:AppConsultaNif.View"
+    Shell.FlyoutBehavior="Disabled"
+    Title="AppConsultaNif"
+    TabBarForegroundColor="#FF9D00"
+    TabBarTitleColor="#FF9D00"
+    >
+
+    <TabBar >
+        <Tab   Title="Home" Icon="home.png">
+                <ShellContent 
+                 Title="Home"
+                 ContentTemplate="{DataTemplate local:MainPage}"
+                 Route="MainPage" />
+        </Tab>
+
+        <Tab  Title="Consultar" Icon="search.png">
+            <ShellContent
+         Title="Pagina de Consulta"
+         ContentTemplate="{DataTemplate view:ConsultaPage}"
+         Route="ConsultaPage" />
+        </Tab>
+
+
+    </TabBar>
+
+</Shell>

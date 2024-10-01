@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            x:Class="AppConsultaNif.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout Spacing="7" VerticalOptions="Start" HorizontalOptions="StartAndExpand" Padding="12,7,24,12" Margin="8,12">
+
+
+            <FlexLayout  Direction="Column"  Margin="0,10,0,20"  HorizontalOptions="Start" Visual="Default">
+                <Image HorizontalOptions="StartAndExpand"  Source="sepego.png" />
+                <Button Clicked="Button_Clicked" Margin="0,10,0,0" FontAttributes="Bold" CharacterSpacing="5" BorderColor="{StaticResource ColorBorder}" BackgroundColor="{StaticResource Orange}" Text="Consulte aqui o seu Nif"></Button>
+            </FlexLayout>
+
+            <VerticalStackLayout>
+                <Frame >
+                    <VerticalStackLayout Spacing="14">
+                        <VerticalStackLayout HorizontalOptions="Start">
+                            <Image HeightRequest="64"  Source="sticky_note.png"></Image>
+                        </VerticalStackLayout>
+                        <VerticalStackLayout Spacing="7">
+                            <Label TextColor="{StaticResource Title}" FontAttributes="Bold" FontSize="Subtitle">Consulta de NIF</Label>
+                            <Label TextColor="{StaticResource Title}" Text="Consulte a informação associada ao seu NIF"/>
+                        </VerticalStackLayout>
+                    </VerticalStackLayout>
+                </Frame>
+            </VerticalStackLayout>
+
+            <VerticalStackLayout>
+                <Frame>
+                    <VerticalStackLayout Spacing="14">
+                        <VerticalStackLayout HorizontalOptions="Start">
+                            <Image HeightRequest="64"  Source="sticky_note.png"></Image>
+                        </VerticalStackLayout>
+                        <VerticalStackLayout Spacing="7">
+                            <Label TextColor="{StaticResource Title}" FontAttributes="Bold" FontSize="Subtitle" Text="Quem pode utilizar este serviço?"/>
+                            <Label TextColor="{StaticResource Title}" Text="Todos os Cidadãos com registo de NIF."/>
+                        </VerticalStackLayout>
+                    </VerticalStackLayout>
+                </Frame>
+            </VerticalStackLayout>
+
+            <VerticalStackLayout>
+                <Frame>
+                    <VerticalStackLayout Spacing="14">
+                        <VerticalStackLayout HorizontalOptions="Start">
+                            <Image HeightRequest="64"  Source="sticky_note.png"></Image>
+                        </VerticalStackLayout>
+                        <VerticalStackLayout Spacing="7">
+                            <Label TextColor="{StaticResource Title}" FontAttributes="Bold" FontSize="Subtitle" Text="Etapas para a realização deste serviço"/>
+                            <Label TextColor="{StaticResource Title}" Text="Preencha o formulário, escolhendo o Tipo de Documento, em seguida introduza o respectivo Número de Documento e por último clique no botão Submeter."/>
+                        </VerticalStackLayout>
+                    </VerticalStackLayout>
+                </Frame>
+            </VerticalStackLayout>
+            
+            <VerticalStackLayout HorizontalOptions="Center" Spacing="1" >
+                <Label TextColor="{StaticResource Title}" FontAttributes="Bold" FontSize="Subtitle" Text="Partilhe esta experiência com amigos!"/>
+            </VerticalStackLayout>
+
+            <HorizontalStackLayout HorizontalOptions="Center" HeightRequest="64" Spacing="7">
+               <Frame BorderColor="{StaticResource Orange}">
+                   <VerticalStackLayout >
+                        <Image HeightRequest="24"   Source="campaign.png"></Image>
+                   </VerticalStackLayout>
+               </Frame>
+                <Frame BorderColor="{StaticResource Orange}">
+                   <StackLayout>
+                        <Image  HeightRequest="24" Source="campaign.png"></Image>
+                   </StackLayout>
+               </Frame>
+                <Frame BorderColor="{StaticResource Orange}">
+                   <StackLayout>
+                        <Image  HeightRequest="24" Source="campaign.png"></Image>
+                   </StackLayout>
+               </Frame>
+            </HorizontalStackLayout>
+            </VerticalStackLayout>
+
+    </ScrollView>
+</ContentPage>

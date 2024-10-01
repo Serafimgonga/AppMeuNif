@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:AppConsultaNif.ModelView"
+             xmlns:converters="clr-namespace:AppConsultaNif.ModelView"
+             xmlns:local="clr-namespace:AppConsultaNif.CustomControls"
+             x:Class="AppConsultaNif.View.ConsultaPage"
+             Title="Pagina de Consulta">
+
+    <ContentPage.BindingContext>
+        <vm:ConsultaPageViewModel />
+    </ContentPage.BindingContext>
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <converters:NullToBooleanConverter x:Key="NullToBooleanConverter"/>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    
+
+
+    <ScrollView>
+
+        <VerticalStackLayout Spacing="7" VerticalOptions="Start" HorizontalOptions="StartAndExpand" Padding="12,7,24,12" Margin="8,12">
+
+            <Label Text="{Binding ErrorMessage}" 
+                IsVisible="{Binding ErrorMessage, Converter={StaticResource NotNullOrEmptyConverter}}" 
+                TextColor="Red"/>
+            
+            <FlexLayout Direction="Column" Margin="0,5,0,20" HorizontalOptions="Start" Visual="Default">
+                <Label FontAttributes="Bold" TextColor="{StaticResource Title}" Margin="0,7,0,7" Text="Número do Documento"/>
+                <Entry Placeholder="Digite o número do CEP" Text="{Binding Numero}" />
+                <Button Command="{Binding SubmitCommand}" Margin="0,7,0,0" FontAttributes="Bold" CharacterSpacing="5" BorderColor="{StaticResource ColorBorder}" BackgroundColor="{StaticResource Orange}" Text="Submeter" />
+            </FlexLayout>
+
+            <ActivityIndicator Color="{StaticResource Orange}" IsRunning="{Binding IsBusy}" IsVisible="{Binding IsBusy}" />
+
+            <VerticalStackLayout IsVisible="{Binding Result, Converter={StaticResource NullToBooleanConverter}}">
+                <Frame>
+                    <VerticalStackLayout Spacing="3">
+                        <VerticalStackLayout HorizontalOptions="Start">
+                            <Image HeightRequest="64" Source="sticky_note.png" />
+                        </VerticalStackLayout>
+                        <VerticalStackLayout Spacing="7">
+                            <Label TextColor="{StaticResource Title}" FontAttributes="Bold" FontSize="Subtitle" Text="Resultado da Consulta" />
+                            <Label TextColor="{StaticResource Title}" Text="{Binding Result.data.Nome}" />
+                            <Frame>
+                                <Frame.GestureRecognizers>
+                                    <TapGestureRecognizer Command="{Binding ShowDetailsCommand}" />
+                                </Frame.GestureRecognizers>
+                                <VerticalStackLayout>
+                                    <Label Text="Clique para ver mais detalhes" />
+                                </VerticalStackLayout>
+                            </Frame>
+                        </VerticalStackLayout>
+                    </VerticalStackLayout>
+                </Frame>
+            </VerticalStackLayout>
+            
+            
+            
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
